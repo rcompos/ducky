@@ -1,0 +1,3 @@
+example/repo-0
+example/repo-1
+other/myrepo

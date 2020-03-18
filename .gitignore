@@ -1,0 +1,25 @@
+.DS_Store
+.swp
+
+# Binaries for programs and plugins
+*.exe
+*.dll
+*.so
+*.dylib
+cmd/ducky/ducky
+cmd/duckyapi/duckyapi
+
+# Test binary, build with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Go excludes
+.DS_Store
+vendor
+
+# Temp dirs
+tmp
+repos
+repos-*
