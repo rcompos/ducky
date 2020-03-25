@@ -1,4 +1,4 @@
-# nks-devops-blackduck
+# ducky - blackduck automation
 
 This repository contains tools for scanning code with Synopsis BlackDuck.  Includes a CLI app and a REST API service.
 
@@ -22,13 +22,13 @@ Supply the Black Duck server user access token as an environment variable (BD_TO
 ⇒ export BD_TOKEN="<blackduck_user_auth_token>"
 ```
 
-# NKS Ducky CLI
+# Ducky CLI
 
 CLI Usage:
 
 ```
 ⇒ go run cmd/ducky/main.go -h
-Supply single argument with Git account and repository name separated by a slash. i.e. netapp/myrepo
+Supply single argument with Git account and repository name separated by a slash. i.e. account/myrepo
   -d	Debugging output
   -f	Force without confirmation prompt
   -h	Help
@@ -46,7 +46,7 @@ Run on command-line with out building binary:
 Scan single repo:
 
 ```
-⇒ go run cmd/ducky/main.go -s -r netapp/<repo_name>:<optional_tag>
+⇒ go run cmd/ducky/main.go -s -r <account>/<repo_name>:<optional_tag>
 ```
 
 Specify repo list from file:
@@ -65,7 +65,7 @@ Alternatley, build a binary and run scans:
 ⇒ ./ducky -s -r netapp/chandler:v1.4.0
 ```
 
-# NKS Ducky API
+# Ducky API
 
 Build API service binary
 
@@ -91,10 +91,10 @@ Browse API endpoints:
 Scan repo:
 
 ```
-⇒ curl http://localhost:8080/api/v1/scan/netapp/<repo-name>:<optional_tag>
+⇒ curl http://localhost:8080/api/v1/scan/<account>/<repo-name>:<optional_tag>
 ```
 
-# NKS Ducky Docker
+# Ducky Docker
 
 Build API service binary for Linux operating systems on AMD64 architecture.
 
